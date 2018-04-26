@@ -18,6 +18,9 @@ class Api extends Controller
         return $this->fetch('index');
     }
 
+    /**
+     * add 添加记录
+     */
     public function add()
     {
         $req = request();
@@ -40,6 +43,10 @@ class Api extends Controller
         }
     }
 
+    /**
+     * 删除记录
+     * @return 返回json 表示是否成功
+     */
     public function delete(){
         $req = request();
         var_dump($req->get());
@@ -52,6 +59,7 @@ class Api extends Controller
 
         }
     }
+    
     /**
      * status  状态码
      * msg     返回信息
